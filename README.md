@@ -8,20 +8,20 @@ La página web es totalmente responsive ya que hemos utilizado Bootstrap para re
 El proyecto de la página web se puede ver en el siguiente enlace https://la-liga21.netlify.app/
 
 ### __En el apartado de "Clasificación" se utilizan las siguientes funciones:__
-* getDataFetch
-* crearClasificacion
+* getDataFetch()
+* crearClasificacion()
 
 **getDataFetch()**
-Primero recibimos los datos a traves de la API mediante la función de "fetch". En ella nos logueamos, comprobamos que la respuesta sea positiva y nos devuelve los datos de clasificación en un array. Una vez tenemos los datos los metemos en una variable la cual utilizaremos como argumento para llamar a la función "crearClasificación" .
+Primero recibimos los datos a traves de la API mediante la función de *getDataFetch()*. En ella nos logueamos, comprobamos que la respuesta sea positiva y nos devuelve los datos de clasificación en un array. Una vez tenemos los datos los metemos en una variable la cual utilizaremos como argumento para llamar a la función *crearClasificación()*.
 
 **crearClasificacion()** 
 Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una *td* por cada variable y mediante los metodos *append* y *appendChild* añadimos las variables a *td* y las *td* las metemos en las filas *tr* para que se muestren en el DOM.
 
 
 ### __En el apartado de "Resultados" utilizamos las siguientes funciones:__
-* getDataFetch
-* crearTabla
-* datosFiltrados
+* getDataFetch()
+* crearTabla()
+* datosFiltrados()
 
 **getDataFetch()**
 Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* :
