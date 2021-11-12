@@ -17,7 +17,7 @@ Primero recibimos los datos a traves de la API mediante la función de "fetch". 
 
 **crearClasificacion**
 
-Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una "td" por cada variable y mediante los metodos __append__ y __appendChild__ añadimos las variables a __td__ y las __td__ las metemos en las filas __tr__ para que se muestren en el DOM.
+Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una "td" por cada variable y mediante los metodos *append* y __appendChild__ añadimos las variables a __td__ y las __td__ las metemos en las filas __tr__ para que se muestren en el DOM.
 
 
 En el apartado de "Resultados utilizamos las siguientes funciones:
