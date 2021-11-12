@@ -18,8 +18,6 @@ El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.n
 ## Parte Técnica:
 
 ### __En el apartado de "Clasificación" se utilizan las siguientes funciones:__
-* getDataFetch()
-* crearClasificacion()
 
 * **getDataFetch()**
 Primero recibimos los datos a traves de la API mediante la función de *getDataFetch()*. En ella nos logueamos, comprobamos que la respuesta sea positiva y nos devuelve los datos de clasificación en un array. Una vez tenemos los datos los metemos en una variable la cual utilizaremos como argumento para llamar a la función *crearClasificación()*.
@@ -29,9 +27,6 @@ Esta función se llama desde la función de fetch enviando como argumento el arr
 
 
 ### __En el apartado de "Resultados" utilizamos las siguientes funciones:__
-* getDataFetch()
-* crearTabla()
-* datosFiltrados()
 
 **getDataFetch()**
 Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* :
