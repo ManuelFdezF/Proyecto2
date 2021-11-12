@@ -36,9 +36,9 @@ Esta función se llama desde la función de fetch enviando como argumento el arr
 **getDataFetch()**
 Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* :
 
-Un *keyup* : para el input donde se introduce el equipo a buscar. Cuando se ejecute, llamará a la función *datosFiltrados* enviandole como argumento el array devuelto por la función fetch.
+- Un *keyup* : para el input donde se introduce el equipo a buscar. Cuando se ejecute, llamará a la función *datosFiltrados* enviandole como argumento el array devuelto por la función fetch.
 
-Un *click* : que se activa mediante el botón "Reset", el cual deja el input en blanco y llama a la función de *crearTabla* con el array recibido del fetch como argumento para que restaure la tabla.
+- Un *click* : que se activa mediante el botón "Reset", el cual deja el input en blanco y llama a la función de *crearTabla* con el array recibido del fetch como argumento para que restaure la tabla.
 
 **crearTabla()**
 Funciona igual que la del apartado de Clasificación con la diferencia de que cuando recibimos el resultado hacemos una comparación con un *if* . Los que lleguen con el campo *null-null* lo convertimos a "Prox." para identificar que ese partido se jugará próximamente.
