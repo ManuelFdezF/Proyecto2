@@ -1,11 +1,11 @@
 # Proyecto2
 ## Proyecto 2 - La Liga
 
-En este proyecto creamos una página web de La Liga de Futbol en la que podemos ver un apartado de Noticias, otro de "Resultados" de toda la temporada, se hayan o no jugado, en la que podremos filtrar los resultados del equipo que se desee buscar, y un apartado de "Clasificación", donde se mostrará la clasificación. Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
+En este proyecto creamos una página web de La Liga de Futbol, utilizando HTML, CSS y JavaScript en la que podemos ver un apartado de "Noticias" (Home), otro de "Resultados" de toda la temporada, se hayan o no jugado, en la que podemos filtrar los resultados del equipo que se desee buscar, y un apartado de "Clasificación", donde se mostrará la clasificación. Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
+
+La página web es totalmente responsive ya que hemos utilizado Bootstrap para realizarla.
 
 El proyecto de la página web se puede ver en el siguiente enlace https://la-liga21.netlify.app/
-
-La página web es totalmente responsive ya que hemos utilizado el framework Bootstrap para realizarla.
 
 ### __En el apartado de "Clasificación" se utilizan las siguientes funciones:__
 * getDataFetch
@@ -43,7 +43,7 @@ La finalidad de esta función es que cuando el usuario introduzca un equipo para
 Mediante el metodo *.filter* comparamos si el nombre introducido está incluido (mediante el método *.include* ) en el nombre del equipo local o visitante del array recibido. Los que encuentra los introduce en una variable la cual pasaremos como argumento llamando a la función *crearTabla* .
 
 
-
+Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner es realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
 
 
