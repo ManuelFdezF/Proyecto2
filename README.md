@@ -15,7 +15,7 @@ El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.n
 * __Git y Github:__ Para almacenar nuestro proyecto 
 
 
-
+## Parte Técnica:
 
 ### __En el apartado de "Clasificación" se utilizan las siguientes funciones:__
 * getDataFetch()
