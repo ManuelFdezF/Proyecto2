@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+    <title>Clasificación Primera División</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="#">La Liga</a> -->
+      <a class="navbar-brand" href="https://www.laliga.com/" target="_blanket">
+        <img src="./img/logoLigaOk.png" alt="" width="30" height="24" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <!-- <a class="nav-link " aria-current="page" href="./index.html">Home</a> -->
+            <a href="./index.html" class="nav-link">
+              <i class="fas fa-home"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./partidos.html">Resultados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./clasificacion.html">Clasificación</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body>
+  <div class="contClasi">
+    <h3 class="titulo">¡¡Notición del día!!</p>
+</div>
+  <div class="card mb-3 mx-auto" style="width: 45%">
+    <img src="./img/convocatoria.jpeg" class="card-img-top"
+      alt="convocatoria seleccion española">
+    <div class="card-body">
+      <h5 class="card-title text-center">Caras nuevas en La Roja</h5>
+      <p class="card-text text-center">España se jugará la semana que viene frente a Grecia, en Atenas, y contra Suecia, en
+        Sevilla,
+        el billete directo al Mundial. Si falla tendrá que ir a una repesca endiablada en el mes de marzo.</p>
+      <!-- <p class="card-text"><small class="text-muted">Last updated 1 hour ago</small></p> -->
+    </div>
+  </div>
+</div>
+
+      <div class="contClasi">
+        <h3 class="titulo titulo2">Clasificación Primera División</p>
+    </div>
+    <table class="table colorTable  w-50 p-3 mx-auto ">
+        <thead>
+            <thead class="table-dark borderL">
+                <th colspan="3">Club</th>
+                <th>PT</th>
+                <th>PJ</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DG</th>
+            </thead>
+        </thead>
+        <tbody id="clasificacion" class=" bodyTableC align-middle">
+            
+        </tbody>
+
+    </table>
+
+<div class="containerLeyenda">
+  <p class="leyenda champions">Champions League</p>
+  <p class="leyenda europa">Europa League</p>
+  <p class="leyenda conference">Conference League</p>
+  <p class="leyenda descenso">Descenso</p>
+</div>
+<div class="containerLeyenda2">
+  <p class="leyenda2"><span class="leyendaNegrita"> PT:</span> Puntos</p>
+  <p class="leyenda2"><span class="leyendaNegrita">PJ:</span> Partidos Jugados</p>
+  <p class="leyenda2"><span class="leyendaNegrita">V:</span> Partidos Ganados</p>
+  <p class="leyenda2"><span class="leyendaNegrita">E: </span>Partidos Empatados</p>
+ 
+</div>
+<div class="containerLeyenda2 containerLeyenda2Margin">
+  <p class="leyenda2"><span class="leyendaNegrita">D:</span> Partidos Perdidos</p>
+  <p class="leyenda2"><span class="leyendaNegrita">GF:</span> Goles a Favor</p>
+  <p class="leyenda2"><span class="leyendaNegrita">GC:</span> Goles en Contra</p>
+  <p class="leyenda2"><span class="leyendaNegrita">DG:</span> Diferencia de Goles</p>
+</div>
+
+
+</body>
+<footer>
+  <div class="footer-dark">
+
+    <div class="container">
+      <div class="row">
+        <div class="col item social"><a href="https://es-es.facebook.com/LaLiga" target="_blanket"><i
+              class="fab fa-facebook-f"></i></a><a href="https://twitter.com/LaLiga" target="_blanket"><i
+              class="fab fa-twitter"></i></a><a href="https://www.instagram.com/laliga" target="_blanket"><i
+              class="fab fa-instagram"></i></a><a href="https://www.youtube.com/user/laliga" target="_blanket"><i
+              class="fab fa-youtube"></i></a></div>
+      </div>
+      <p class="copyright">La Liga © 2021</p>
+    </div>
+
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="./js/standings.js"></script>
+<script src="https://kit.fontawesome.com/f955c68031.js" crossorigin="anonymous"></script>
+</html>
