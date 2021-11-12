@@ -7,7 +7,7 @@ El proyecto de la página web se puede ver en el siguiente enlace https://la-lig
 
 La página web es totalmente responsive ya que hemos utilizado el framework Bootstrap para realizarla.
 
-En el apartado de "Clasificación" se utilizan las siguientes funciones:
+__En el apartado de "Clasificación" se utilizan las siguientes funciones:__
 * getDataFetch
 * crearClasificacion
 
@@ -20,7 +20,7 @@ Primero recibimos los datos a traves de la API mediante la función de "fetch". 
 Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una *td* por cada variable y mediante los metodos *append* y *appendChild* añadimos las variables a *td* y las *td* las metemos en las filas *tr* para que se muestren en el DOM.
 
 
-En el apartado de "Resultados utilizamos las siguientes funciones:
+__En el apartado de "Resultados" utilizamos las siguientes funciones:__
 * getDataFetch
 * crearTabla
 * datosFiltrados
@@ -40,7 +40,7 @@ Funciona igual que la del apartado de Clasificación con la diferencia de que cu
 **datosFiltrados**
 
 La finalidad de esta función es que cuando el usuario introduzca un equipo para ver sus resultados, el evento llamará a esta función. 
-Mediante el metodo *.filter* comparamos si el nombre introducido está incluido (mediante el método *.include* ) en el nombre del equipo local o visitante del arry recibido. Los que encuentra los mete en una variable la cual pasaremos como argumento llamando a la función *crearTabla* .
+Mediante el metodo *.filter* comparamos si el nombre introducido está incluido (mediante el método *.include* ) en el nombre del equipo local o visitante del array recibido. Los que encuentra los introduce en una variable la cual pasaremos como argumento llamando a la función *crearTabla* .
 
 
 
