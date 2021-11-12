@@ -12,7 +12,6 @@ El proyecto de la página web se puede ver en el siguiente enlace https://la-lig
 * crearClasificacion
 
 **getDataFetch**
-
 Primero recibimos los datos a traves de la API mediante la función de "fetch". En ella nos logueamos, comprobamos que la respuesta sea positiva y nos devuelve los datos de clasificación en un array. Una vez tenemos los datos los metemos en una variable la cual utilizaremos como argumento para llamar a la función "crearClasificación" .
 
 **crearClasificacion**
