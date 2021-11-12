@@ -21,7 +21,7 @@ El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.n
 * getDataFetch()
 * crearClasificacion()
 
-**getDataFetch()**
+* **getDataFetch()**
 Primero recibimos los datos a traves de la API mediante la función de *getDataFetch()*. En ella nos logueamos, comprobamos que la respuesta sea positiva y nos devuelve los datos de clasificación en un array. Una vez tenemos los datos los metemos en una variable la cual utilizaremos como argumento para llamar a la función *crearClasificación()*.
 
 **crearClasificacion()** 
