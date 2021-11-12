@@ -17,7 +17,7 @@ Primero recibimos los datos a traves de la API mediante la función de "fetch". 
 
 **crearClasificacion**
 
-Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una "td" por cada variable y mediante los metodos *append* y *appendChild* añadimos las variables a *td* y las *td* las metemos en las filas *tr* para que se muestren en el DOM.
+Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una *td* por cada variable y mediante los metodos *append* y *appendChild* añadimos las variables a *td* y las *td* las metemos en las filas *tr* para que se muestren en el DOM.
 
 
 En el apartado de "Resultados utilizamos las siguientes funciones:
@@ -27,8 +27,10 @@ En el apartado de "Resultados utilizamos las siguientes funciones:
 
 **getDataFetch**
 
-Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* : 
+Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* :
+
 Un *keyup* : para el input donde se introduce el equipo a buscar. Cuando se ejecute, llamará a la función *datosFiltrados* enviandole como argumento el array devuelto por la función fetch.
+
 Un *click* : que se activa mediante el botón "Reset", el cual deja el input en blanco y llama a la función de *crearTabla* con el array recibido del fetch como argumento para que restaure la tabla.
 
 **crearTabla**
