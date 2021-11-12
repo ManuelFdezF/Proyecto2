@@ -1,11 +1,22 @@
-# Proyecto2
-## Proyecto 2 - La Liga
+# Proyecto La Liga V1.0
 
-En este proyecto creamos una página web de La Liga de Futbol, utilizando HTML, CSS y JavaScript en la que podemos ver un apartado de "Noticias" (Home), otro de "Resultados" de toda la temporada, se hayan o no jugado, en la que podemos filtrar los resultados del equipo que se desee buscar, y un apartado de "Clasificación", donde se mostrará la clasificación. Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
+
+En este proyecto creamos una página web de La Liga de Futbol en la que podemos ver un apartado de "Noticias" (Home), otro de "Resultados" de toda la temporada, se hayan o no jugado, en la que podemos filtrar los resultados del equipo que se desee buscar, y un apartado de "Clasificación", donde se mostrará la clasificación. Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
 
 La página web es totalmente responsive ya que hemos utilizado Bootstrap para realizarla.
 
 El proyecto de la página web se puede ver en el siguiente enlace https://la-liga21.netlify.app/
+
+## Tecnologías empleadas:
+* __HTML:__ Para realizar la estructura de la página web
+* __CSS:__ Para el diseño de la página web
+* __Bootstrap:__ Para el diseño y al utilizar este framework obtenemos una página web responsive que se puede ver en cualquier dispositivo.
+* __JavaScript:__ Para darle funcionalidad a la página web
+* __Postman:__ Se utilizó al inicio del proyecto para descargar los datos de la API.
+* __Git y Github:__ Para almacenar nuestro proyecto 
+
+
+
 
 ### __En el apartado de "Clasificación" se utilizan las siguientes funciones:__
 * getDataFetch()
