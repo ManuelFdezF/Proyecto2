@@ -47,21 +47,39 @@
     <div class="contResul">
         <h3 class="titulo">Resultados Primera División</p>
     </div>
-    
-        
-        
+
+
+
     <div class="containerInput">
-        <p class="tituloBusqueda">Introduzca un equipo para ver sus resultados:</p>
-        <input type="text" class="nombreFiltro" id="datoInput" placeholder="Ej. Valencia">
-        <!-- <button type="button" class="btn btn-info" id="search" >Buscar</button> -->
-        <button type="button" class="botonReset1" id="botonReset">Reset</button>
+        <div class="containerGrupo">
+            <div class="containerEquipo">
+                <p class="tituloBusqueda">Introduzca un equipo para ver sus resultados:</p>
+                <input type="text" class="nombreFiltro" id="datoInput" placeholder="Ej. Valencia">
+            </div>
+
+            <div class="containerJornada">
+                <div class="jornadaEInput">
+                    <p class="tituloBusqueda">Introduzca la jornada que desea ver:</p>
+                    <input type="number" class="nombreFiltro jorn" id="datoInputJornada" placeholder="Ej. 1">
+                </div>
+                <div class="containerBoton">
+                    <button type="button" class="botonReset1" id="botonReset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div class="containerLogoC">
+            <img src="./img/campoFutbol.jpg" alt="" class="logoCampo">
+        </div>
+        <div class="containerLogoR">
+            <img src="./img/logoLigaGrande.png" alt="" class="logoResut">
+        </div>
     </div>
 
 
     <div class="containerSpinner">
         <div class="lds-hourglass spinner1"></div>
     </div>
-   
+
 
 
     <table class="table colorTable  mx-auto" style="width: 70%;">
@@ -72,10 +90,10 @@
             <th colspan="2">Equipo Visitante</th>
             <th>Fecha</th>
         </thead>
-        <tbody id="bodyTable" class="align-middle tablaResult2">
+        <tbody id="bodyTable" class="align-middle tablaResult2 text-center marginEqui">
         </tbody>
     </table>
-   
+
 
 </body>
 <footer>

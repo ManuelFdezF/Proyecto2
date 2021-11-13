@@ -17,10 +17,10 @@ function getDataFetch() {
             return response.json();
         }
     }).then(function (data) {
-        console.log(data)
+        // console.log(data)
 
         let encuentros = data.matches;
-        console.log(encuentros);
+        // console.log(encuentros);
         crearTabla(encuentros);
         ocultarSpinner();
 
@@ -29,9 +29,17 @@ function getDataFetch() {
             datosFiltrados(encuentros);
         })
 
+        let datoInput2 = document.getElementById("datoInputJornada")
+        datoInput2.addEventListener("keyup", function () {
+            // console.log("input jornada vale: ", datoInput2.value)
+            jornadasFiltrados(encuentros);
+        })
+
+
         let buttonReset = document.getElementById("botonReset")
         buttonReset.addEventListener("click", () => {
             datoInput.value = ""
+            datoInputJornada.value = ""
             crearTabla(encuentros);
         })
 
@@ -52,9 +60,6 @@ function crearTabla(parti) {
     for (let i = 0; i < parti.length; i++) {
         const tr = document.createElement("tr")
 
-        // let fechaPartido = parti[i].utcDate;
-        // let jornada = parti[i].matchday;
-
         let jornada = document.createElement("p");
         jornada.innerHTML = parti[i].matchday;
         jornada.classList.add("numJornada");
@@ -63,23 +68,10 @@ function crearTabla(parti) {
         imgEquipLocal.setAttribute("src", "https://crests.football-data.org/" + parti[i].homeTeam.id + ".svg");
         imgEquipLocal.classList.add("escudo");
 
-        // let nombreEquipoLocal = document.createElement("p");
-        // nombreEquipoLocal.innerHTML = parti[i].homeTeam.name;
-
-        let nombreEquipoLocal = parti[i].homeTeam.name;
-        nombreEquipoLocal.innerHTML = nombreEquipoLocal;
-
-        // let resultado = document.createElement("p");
-        // resultado.classList.add("resul");
-        // resultado.innerHTML = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
-        // console.log(resultado)
-        // if (resultado === "null-null") {
-        //     resultado = "Prox."
-        //     console.log("entra en el if")
-        // } else {
-        //     resultado.textContent = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
-        //     console.log("entra en el else")
-        // }
+        let nombreEquipoLocal = document.createElement("p");
+        nombreEquipoLocal.innerHTML = parti[i].homeTeam.name;
+        // let nombreEquipoLocal = parti[i].homeTeam.name;
+        // nombreEquipoLocal.innerHTML = nombreEquipoLocal;
 
         let resultado = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
         // console.log(resultado)
@@ -88,7 +80,6 @@ function crearTabla(parti) {
         } else {
             resultado.textContent = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
         }
-
 
         let nombreEquipoVisit = document.createElement("p");
         nombreEquipoVisit.innerHTML = parti[i].awayTeam.name;
@@ -109,10 +100,8 @@ function crearTabla(parti) {
             td.append(datosPartidos[j]);
             tr.appendChild(td);
         }
-
         tabla.appendChild(tr);
     }
-
 }
 // crearTabla(partidos.matches);
 
@@ -140,6 +129,46 @@ function datosFiltrados(partidosFil) {
     // datoInput.value = "";
     crearTabla(partidosFiltrados);
 }
+
+
+// -------------------- función de filtrar por Jornada 
+
+function jornadasFiltrados(jornadaFil) {
+    let datoInputJornada = document.querySelector("input[type=number]").value
+    // console.log(jornadaFil)
+    // console.log("Jornada introducida: ", datoInputJornada)
+    let jornadaFiltrados = jornadaFil.filter((n) => {
+        // console.log ("n.matchday vale: ", n.matchday)
+        if (n.matchday == datoInputJornada ) {
+            
+            return true;
+        } else {
+
+            return false;
+        }
+        
+    })
+    // console.log(jornadaFiltrados)
+    // datoInput.value = "";
+    crearTabla(jornadaFiltrados);
+}
+
+
+
+
+
+       // let resultado = document.createElement("p");
+        // resultado.classList.add("resul");
+        // resultado.innerHTML = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
+        // console.log(resultado)
+        // if (resultado === "null-null") {
+        //     resultado = "Prox."
+        //     console.log("entra en el if")
+        // } else {
+        //     resultado.textContent = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
+        //     console.log("entra en el else")
+        // }
+
 
 
 

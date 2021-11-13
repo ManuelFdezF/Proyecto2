@@ -19,6 +19,7 @@ function getDataFetch() {
         let clasiVivo = data1.standings[0].table;
         console.log(clasiVivo);
         crearClasificacion(clasiVivo)
+        ocultarSpinner();
         
     })
 }
@@ -95,3 +96,9 @@ function crearClasificacion(clasi) {
 
 }
 // crearClasificacion(clasificacion.standings[0].table);
+
+let spinner = document.querySelector('.containerSpinner')
+function ocultarSpinner() {
+    spinner.style.display = 'none';
+    // console.log(spinner)
+}
