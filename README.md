@@ -46,7 +46,7 @@ Mediante el metodo *.filter* comparamos si el nombre introducido está incluido 
 Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner es realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
 
-
+## To Do:
 
 
 
