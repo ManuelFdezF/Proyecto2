@@ -7,12 +7,12 @@ En este proyecto creamos una página web de La Liga de Futbol en la que podemos 
 El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.netlify.app/)
 
 ## Tecnologías empleadas:
-* __HTML:__ Para realizar la estructura de la página web
-* __CSS:__ Para el diseño de la página web
+* __HTML:__ Para realizar la estructura de la página web.
+* __CSS:__ Para el diseño de la página web.
 * __Bootstrap:__ Para el diseño y al utilizar este framework obtenemos una página web responsive que se puede ver en cualquier dispositivo.
-* __JavaScript:__ Para darle funcionalidad a la página web
+* __JavaScript:__ Para darle funcionalidad a la página web.
 * __Postman:__ Se utilizó al inicio del proyecto para descargar los datos de la API.
-* __Git y Github:__ Para almacenar nuestro proyecto 
+* __Git y Github:__ Para almacenar nuestro proyecto en la nube.
 
 
 ## Parte Técnica:
