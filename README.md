@@ -47,8 +47,8 @@ Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cua
 
 
 ## To Do:
-* Añadir mas noticias al home
-* Añadir más Ligas
+* Añadir más noticias al home
+* Añadir ligas de otros países
 * Añadir apartado de estadísticas
 
 
