@@ -48,7 +48,17 @@ tbody tr:nth-child(odd){
     background-color: rgb(248, 246, 246);
 }
 
+/* .escudosClasificacion{
+    display: flex;
+    justify-content: space-between;
+    display: inline-block;
+} */
 
+.containerTeams li{
+    list-style: none;
+    /* display: inline-block; */
+    
+}
 
 /* --------------------------------ESTILOS DE CLASIFICACIÓN --------------------------------*/
 
