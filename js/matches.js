@@ -117,7 +117,29 @@ function crearTabla(parti) {
 // crearTabla(partidos.matches);
 
 
+let spinner = document.querySelector('.containerSpinner')
+function ocultarSpinner() {
+    spinner.style.display = 'none';
+    // console.log(spinner)
+}
 
+
+// ------------------- Empieza la función para filtar los partidos
+
+function datosFiltrados(partidosFil) {
+    let datoInput = document.querySelector("input").value
+    // console.log("funciona")
+    let partidosFiltrados = partidosFil.filter((p) => {
+        if (p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase())) {
+            return true;
+        } else {
+
+            return false;
+        }
+    })
+    // datoInput.value = "";
+    crearTabla(partidosFiltrados);
+}
 
 
 
@@ -146,28 +168,7 @@ function crearTabla(parti) {
 //     // console.log(spinner)
 // })
 
-let spinner = document.querySelector('.containerSpinner')
-function ocultarSpinner() {
-    spinner.style.display = 'none';
-    // console.log(spinner)
-}
 
 
 
 
-// ------------------- Empieza la función para filtar los partidos
-
-function datosFiltrados(partidosFil) {
-    let datoInput = document.querySelector("input").value
-    // console.log("funciona")
-    let partidosFiltrados = partidosFil.filter((p) => {
-        if (p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase())) {
-            return true;
-        } else {
-
-            return false;
-        }
-    })
-    // datoInput.value = "";
-    crearTabla(partidosFiltrados);
-}
