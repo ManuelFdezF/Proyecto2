@@ -1,6 +1,11 @@
 # Proyecto - La liga V1.0 
 
-En este proyecto creamos una página web de La Liga de Futbol en la que podemos ver un apartado de "Noticias" (Home), otro de "Resultados" de toda la temporada, se hayan o no jugado, en la que podemos filtrar los resultados del equipo que se desee buscar, y un apartado de "Clasificación", donde se mostrará la clasificación. Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
+En este proyecto creamos una página web de La Liga de Futbol que se divide en tres apartados:
+* __Noticias__(Home): En él se verán las diferentes noticias de actualidad.
+* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada.
+* __Clasificación__: Se muestra el "notición del día" y la clasificación completa. 
+
+Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
 
 
 El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.netlify.app/)
@@ -14,7 +19,7 @@ El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.n
 * __Git y Github:__ Para almacenar nuestro proyecto en la nube.
 
 
-## Parte Técnica:
+## Descripción Técnica:
 
 ### __En el apartado de *Clasificación* se utilizan las siguientes funciones:__
 
@@ -44,6 +49,8 @@ Mediante el metodo *.filter* comparamos si el nombre introducido está incluido 
 
 Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner es realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
+## Versiones
+* Versión 1.0 - noviembre de 2021
 
 ## To Do:
 * Añadir más noticias al home
