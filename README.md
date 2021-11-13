@@ -1,7 +1,11 @@
-# Proyecto La Liga V1.0
+# Proyecto - La liga V1.0 
 
+En este proyecto creamos una página web de La Liga de Futbol que se divide en tres apartados:
+* __Noticias__(Home): En él se verán las diferentes noticias de actualidad.
+* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada.
+* __Clasificación__: Se muestra el "notición del día" y la clasificación completa. 
 
-En este proyecto creamos una página web de La Liga de Futbol en la que podemos ver un apartado de "Noticias" (Home), otro de "Resultados" de toda la temporada, se hayan o no jugado, en la que podemos filtrar los resultados del equipo que se desee buscar, y un apartado de "Clasificación", donde se mostrará la clasificación. Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
+Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
 
 
 El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.netlify.app/)
@@ -15,9 +19,9 @@ El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.n
 * __Git y Github:__ Para almacenar nuestro proyecto en la nube.
 
 
-## Parte Técnica:
+## Descripción Técnica:
 
-### __En el apartado de "Clasificación" se utilizan las siguientes funciones:__
+### __En el apartado de *Clasificación* se utilizan las siguientes funciones:__
 
 * **getDataFetch()**
 Primero recibimos los datos a traves de la API mediante la función de *getDataFetch()*. En ella nos logueamos, comprobamos que la respuesta sea positiva y nos devuelve los datos de clasificación en un array. Una vez tenemos los datos los metemos en una variable la cual utilizaremos como argumento para llamar a la función *crearClasificación()*.
@@ -26,7 +30,7 @@ Primero recibimos los datos a traves de la API mediante la función de *getDataF
 Esta función se llama desde la función de fetch enviando como argumento el array recibido, y mediante un bucle for va creando filas y separando en variables cada dato del array recibido (Posición, Nombre de equipo, etc). A continuación se introducen todas las variables en un array (datosClasificación) el cual a continuación recorreremos mediante otro bucle for para crear una *td* por cada variable y mediante los metodos *append* y *appendChild* añadimos las variables a *td* y las *td* las metemos en las filas *tr* para que se muestren en el DOM.
 
 
-### __En el apartado de "Resultados" utilizamos las siguientes funciones:__
+### __En el apartado de *Resultados* utilizamos las siguientes funciones:__
 
 * **getDataFetch()**
 Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* :
@@ -45,8 +49,13 @@ Mediante el metodo *.filter* comparamos si el nombre introducido está incluido 
 
 Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner es realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
+## Versiones
+* Versión 1.0 - noviembre de 2021
 
 ## To Do:
+* Añadir más noticias al home
+* Añadir ligas de otros países
+* Añadir apartado de estadísticas
 
 
 
