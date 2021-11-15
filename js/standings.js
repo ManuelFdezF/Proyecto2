@@ -14,10 +14,10 @@ function getDataFetch() {
             return response.json();
         }
     }).then(function (data1) {
-        console.log(data1)
+        // console.log(data1)
 
         let clasiVivo = data1.standings[0].table;
-        console.log(clasiVivo);
+        // console.log(clasiVivo);
         crearClasificacion(clasiVivo)
         ocultarSpinner();
         

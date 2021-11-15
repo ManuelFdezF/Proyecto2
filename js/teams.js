@@ -10,10 +10,10 @@ function getDataFetch() {
             return response.json();
         }
     }).then(function (data1) {
-        console.log(data1)
+        // console.log(data1)
 
         let clasiVivo = data1.standings[0].table;
-        console.log(clasiVivo);
+        // console.log(clasiVivo);
         crearClasificacion(clasiVivo)
         
         
@@ -32,7 +32,7 @@ function crearClasificacion(escud) {
 
         let escudoEquipo = document.createElement("img");
         escudoEquipo.setAttribute("src", escud[i].team.crestUrl)
-        escudoEquipo.classList.add("escudo")
+        escudoEquipo.classList.add("escudo2")
 
         let listadoEscudos = [ escudoEquipo ];
 

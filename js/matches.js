@@ -88,9 +88,29 @@ function crearTabla(parti) {
         imgEquipVisit.setAttribute("src", "https://crests.football-data.org/" + parti[i].awayTeam.id + ".svg");
         imgEquipVisit.classList.add("escudo");
 
-        let fechaPartido = document.createElement("p");
-        fechaPartido.innerHTML = parti[i].utcDate;
+        // let fechaPartido = document.createElement("p");
+        // fechaPartido.innerHTML = parti[i].utcDate;
         // console.log(fechaPartido)
+        let fechaPartido = document.createElement("p");
+        date = new Date(parti[i].utcDate)
+        year = date.getFullYear();
+        month = date.getMonth()+1;
+        dt = date.getDate();
+        hour = date.getHours();
+        minutes = date.getMinutes();
+        console.log("Día: ", dt)
+        console.log("Mes: ", month)
+        if (dt <10){
+            dt = '0' + dt;
+        }
+        if (month < 10){
+            month = '0' + month;
+        }
+        if (minutes <10){
+            minutes = '0' + minutes
+        }
+
+        fechaPartido.innerHTML = dt +"/"+month+"/"+year+" - "+ hour+":"+minutes;
 
 
         let = datosPartidos = [jornada, imgEquipLocal, nombreEquipoLocal, resultado, nombreEquipoVisit, imgEquipVisit, fechaPartido]
