@@ -94,23 +94,23 @@ function crearTabla(parti) {
         let fechaPartido = document.createElement("p");
         date = new Date(parti[i].utcDate)
         year = date.getFullYear();
-        month = date.getMonth()+1;
+        month = date.getMonth() + 1;
         dt = date.getDate();
         hour = date.getHours();
         minutes = date.getMinutes();
-        console.log("Día: ", dt)
-        console.log("Mes: ", month)
-        if (dt <10){
+        // console.log("Día: ", dt)
+        // console.log("Mes: ", month)
+        if (dt < 10) {
             dt = '0' + dt;
         }
-        if (month < 10){
+        if (month < 10) {
             month = '0' + month;
         }
-        if (minutes <10){
-            minutes = '0' + minutes
+        if (minutes < 10) {
+            minutes = '0' + minutes;
         }
 
-        fechaPartido.innerHTML = dt +"/"+month+"/"+year+" - "+ hour+":"+minutes;
+        fechaPartido.innerHTML = dt + "/" + month + "/" + year + " - " + hour + ":" + minutes;
 
 
         let = datosPartidos = [jornada, imgEquipLocal, nombreEquipoLocal, resultado, nombreEquipoVisit, imgEquipVisit, fechaPartido]
@@ -127,6 +127,7 @@ function crearTabla(parti) {
 
 
 let spinner = document.querySelector('.containerSpinner')
+
 function ocultarSpinner() {
     spinner.style.display = 'none';
     // console.log(spinner)
@@ -159,14 +160,14 @@ function jornadasFiltrados(jornadaFil) {
     // console.log("Jornada introducida: ", datoInputJornada)
     let jornadaFiltrados = jornadaFil.filter((n) => {
         // console.log ("n.matchday vale: ", n.matchday)
-        if (n.matchday == datoInputJornada ) {
-            
+        if (n.matchday == datoInputJornada) {
+
             return true;
         } else {
 
             return false;
         }
-        
+
     })
     // console.log(jornadaFiltrados)
     // datoInput.value = "";
@@ -177,17 +178,17 @@ function jornadasFiltrados(jornadaFil) {
 
 
 
-       // let resultado = document.createElement("p");
-        // resultado.classList.add("resul");
-        // resultado.innerHTML = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
-        // console.log(resultado)
-        // if (resultado === "null-null") {
-        //     resultado = "Prox."
-        //     console.log("entra en el if")
-        // } else {
-        //     resultado.textContent = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
-        //     console.log("entra en el else")
-        // }
+// let resultado = document.createElement("p");
+// resultado.classList.add("resul");
+// resultado.innerHTML = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
+// console.log(resultado)
+// if (resultado === "null-null") {
+//     resultado = "Prox."
+//     console.log("entra en el if")
+// } else {
+//     resultado.textContent = parti[i].score.fullTime.homeTeam + "-" + parti[i].score.fullTime.awayTeam;
+//     console.log("entra en el else")
+// }
 
 
 
@@ -216,8 +217,3 @@ function jornadasFiltrados(jornadaFil) {
 //     spinner.style.display = 'none';
 //     // console.log(spinner)
 // })
-
-
-
-
-
