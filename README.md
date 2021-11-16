@@ -50,7 +50,12 @@ Mediante el metodo *.filter* comparamos si el nombre introducido está incluido 
 
 ### **Escudos en el menú de navegación**
 
-Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner se ha realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
+En el apartado "Home" y "Resultados" se mostrarán los escudos de los equipos de la liga ordenados en función de su posición en la clasificación.
+Para obtener los escudos utilizamos la función *getDataFetch()* y mediante la función *crearClasificacionEscudos()* se añaden al menú de navegación
+
+
+
+Antes de que carguen las tablas de clasificación y de resultados aparace un spinner (loader) que se ocultará cuando éstas tengan todos los datos. El spinner se ha realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
 ## Versiones
 * Versión 1.0 - noviembre de 2021
