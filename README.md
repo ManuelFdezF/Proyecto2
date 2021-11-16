@@ -38,19 +38,19 @@ Esta función se llama desde la función de *getDataFetch()* enviando como argum
 * **getDataFetch()**
 Funciona igual que la del apartado de Clasificación pero se añaden dos eventos *addEventListener* :
 
-  * Un *keyup* : para el input donde se introduce el equipo a buscar. Cuando se ejecute, llamará a la función *datosFiltrados* enviandole como argumento el array devuelto por la función fetch.
-
-  * Un *click* : que se activa mediante el botón "Reset", el cual deja el input en blanco y llama a la función de *crearTabla* con el array recibido del fetch como argumento para que restaure la tabla.
+  * Dos *keyup*: para los *input* donde se introduce el equipo a buscar o el número de jornada. Cuando se ejecuten, llamarán a la función *datosFiltrados()* enviandole como argumento el array devuelto por la función *getDataFetch()*.
+  * Un *click*: que se activa mediante el botón "Reset", el cual deja los *input* en blanco y llama a la función de *crearTabla()* con el array recibido de la función *getDataFetch()* como argumento para que restaure la tabla.
 
 * **crearTabla()**
-Funciona igual que la del apartado de Clasificación con la diferencia de que cuando recibimos el resultado hacemos una comparación con un *if* . Los que lleguen con el campo *null-null* lo convertimos a "Prox." para identificar que ese partido se jugará próximamente.
+Funciona igual que la del apartado de Clasificación con la diferencia de que cuando recibimos el resultado hacemos una comparación con un *if*. Los que lleguen con el campo *null-null* lo convertimos a "Prox." para identificar que ese partido se jugará próximamente.
 
 * **datosFiltrados()**
-La finalidad de esta función es que cuando el usuario introduzca un equipo para ver sus resultados, el evento llamará a esta función. 
-Mediante el metodo *.filter* comparamos si el nombre introducido está incluido (mediante el método *.include* ) en el nombre del equipo local o visitante del array recibido. Los que encuentra los introduce en una variable la cual pasaremos como argumento llamando a la función *crearTabla* .
+La finalidad de esta función es que cuando el usuario introduzca un equipo para ver sus resultados o una jornada para que se muestren solo esos partidos, el evento llamará a esta función. 
+Mediante el metodo *.filter* comparamos si el nombre introducido está incluido (mediante el método *.include* ) en el nombre del equipo local o visitante del array recibido. Los que encuentra los introduce en una variable la cual pasaremos como argumento llamando a la función *crearTabla()* .
 
+### **Escudos en el menú de navegación**
 
-Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner es realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
+Antes de que carguen las tablas aparace un spinner (loader) que se ocultará cuando estás tengan todos los datos. El spinner se ha realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
 ## Versiones
 * Versión 1.0 - noviembre de 2021
