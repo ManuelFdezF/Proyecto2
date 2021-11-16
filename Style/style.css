@@ -345,3 +345,12 @@ tbody td:nth-child(3){
     font-size:13px;
     margin-bottom:0;
   }
+
+  .containerTitFooter{
+      display: flex;
+      justify-content: center;
+  }
+  .footerCopy{
+    color:#f0f9ff;
+    opacity:0.75;
+  }

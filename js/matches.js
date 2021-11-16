@@ -31,8 +31,12 @@ function getDataFetch() {
 
         let datoInput2 = document.getElementById("datoInputJornada")
         datoInput2.addEventListener("keyup", function () {
-            // console.log("input jornada vale: ", datoInput2.value)
-            jornadasFiltrados(encuentros);
+            console.log("input jornada vale: ", datoInput2.value)
+            if (datoInput2.value == "") {
+                crearTabla(encuentros)
+            } else {
+                jornadasFiltrados(encuentros);
+            }
         })
 
 
