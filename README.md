@@ -2,8 +2,8 @@
 
 En este proyecto creamos una página web de La Liga de Futbol que se divide en tres apartados:
 * __Noticias__(Home): En él se verán las diferentes noticias de actualidad. También veremos en el menú de navegación los escudos de los equipos ordenados en función a su posición actual en la clasificación.
-* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada y veremos también los escudos en el menú de navegación.
-* __Clasificación__: Se muestra el "notición del día" y la clasificación completa. 
+* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada. Veremos también los escudos en el menú de navegación al igual que en el Home.
+* __Clasificación__: Se muestra el "Notición del día" y la clasificación completa. 
 
 
 
