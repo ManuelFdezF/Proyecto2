@@ -48,14 +48,13 @@ Funciona igual que la del apartado de Clasificación con la diferencia de que cu
 La finalidad de esta función es que cuando el usuario introduzca un equipo para ver sus resultados o una jornada para que se muestren solo esos partidos, el evento llamará a esta función. 
 Mediante el metodo *.filter* comparamos si el nombre introducido está incluido (mediante el método *.include* ) en el nombre del equipo local o visitante del array recibido. Los que encuentra los introduce en una variable la cual pasaremos como argumento llamando a la función *crearTabla()* .
 
+Antes de que carguen las tablas de clasificación y de resultados aparace un spinner (loader) que se ocultará cuando éstas tengan todos los datos. El spinner se ha realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
+
 ### **Escudos en el menú de navegación**
 
 En el apartado "Home" y "Resultados" se mostrarán los escudos de los equipos de la liga ordenados en función de su posición en la clasificación.
 Para obtener los escudos utilizamos la función *getDataFetch()* y mediante la función *crearClasificacionEscudos()* se añaden al menú de navegación
 
-
-
-Antes de que carguen las tablas de clasificación y de resultados aparace un spinner (loader) que se ocultará cuando éstas tengan todos los datos. El spinner se ha realizado en CSS y se oculta del DOM mediante una función la cual, una vez se carguen los datos en las tablas se le añade al contenedor padre del spinner un *.style.display="none"* para que desaparezca.
 
 ## Versiones
 * Versión 1.0 - noviembre de 2021
