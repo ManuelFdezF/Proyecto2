@@ -10,7 +10,7 @@ En este proyecto creamos una página web de La Liga de Futbol que se divide en t
 Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
 
 
-El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.netlify.app/)
+El proyecto de la página web se puede ver pinchando [aquí.](https://la-liga21.netlify.app/)
 
 ## Tecnologías empleadas:
 ![logosProgram](https://raw.githubusercontent.com/ManuelFdezF/Proyecto2/master/img/logos.jpg?token=AWFYJGQ4X5UBW2EDAF62WNDBSQF34)
