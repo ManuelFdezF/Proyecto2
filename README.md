@@ -13,7 +13,7 @@ Los datos de resultados y clasificación son en caliente ya que se utiliza una A
 El proyecto de la página web se puede ver pinchando [aquí.](https://la-liga21.netlify.app/)
 
 ## Tecnologías empleadas:
-![logosProgram](https://raw.githubusercontent.com/ManuelFdezF/Proyecto2/master/img/logos.jpg?token=AWFYJGQ4X5UBW2EDAF62WNDBSQF34)
+![logosProgram](https://github.com/ManuelFdezF/Proyecto2/blob/bbecdfeb3bede7b17a087b2c3a5c9db63284a8ac/img/logos.jpg)
 * __HTML:__ Para realizar la estructura de la página web.
 * __CSS:__ Para el diseño de la página web.
 * __Bootstrap:__ Para el diseño y al utilizar este framework obtenemos una página web responsive que se puede ver en cualquier dispositivo.
