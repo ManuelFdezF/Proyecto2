@@ -14,7 +14,7 @@ function getDataFetch() {
 
         let clasiVivo = data1.standings[0].table;
         // console.log(clasiVivo);
-        crearClasificacion(clasiVivo)
+        crearClasificacionEscudos(clasiVivo)
         
         
     })
@@ -23,7 +23,7 @@ function getDataFetch() {
 getDataFetch();
 
 
-function crearClasificacion(escud) {
+function crearClasificacionEscudos(escud) {
 
     let logoteams2 = document.getElementById("logoTeams");
     
