@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,9 +11,11 @@
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <title>Resultados primera división</title>
 </head>
+
+<!-- -------------------- Navbar ----------------------- -->
+
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">La Liga</a> -->
         <a class="navbar-brand" href="https://www.laliga.com/" target="_blanket">
             <img src="./img/logoLigaOk.png" alt="" width="30" height="24" class="d-inline-block align-text-top"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -23,7 +25,6 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <!-- <a class="nav-link" aria-current="page" href="./index.html">Home</a> -->
                     <a href="./index.html" class="nav-link">
                         <i class="fas fa-home"></i></a>
                 </li>
@@ -33,28 +34,20 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./clasificacion.html">Clasificación</a>
                 </li>
-                <!-- <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li> -->
             </ul>
             <div class="containerTeams">
                 <div id="logoTeams" class="escudosClasificacion navbar">
-              
                 </div>
-              </div>
+            </div>
         </div>
     </div>
 </nav>
 
 <body>
-
-
+    <!-- ----------------------- Contenedor input e imágenes ----------------------- -->
     <div class="contResul">
         <h3 class="titulo">Resultados Primera División</p>
     </div>
-
-
-
     <div class="containerInput">
         <div class="containerGrupo">
             <div class="containerEquipo">
@@ -80,12 +73,12 @@
         </div>
     </div>
 
-
+    <!-- ----------------------- Spinner ----------------------- -->
     <div class="containerSpinner">
         <div class="lds-hourglass spinner1"></div>
     </div>
 
-
+    <!-- ----------------------- Tabla de Resultados ----------------------- -->
 
     <table class="table colorTable  mx-auto" style="width: 70%;">
         <thead class="table-dark marginC">
@@ -98,13 +91,15 @@
         <tbody id="bodyTable" class="align-middle tablaResult2 text-center marginEqui">
         </tbody>
     </table>
-
-
 </body>
+
+<!-- ----------------------- Footer ----------------------- -->
 <footer>
     <div class="footer-dark">
-
         <div class="container">
+            <div class="containerTitFooter">
+                <p class="footerCopy">¡Entérate de todo en nuestras redes!</p>
+            </div>
             <div class="row">
                 <div class="col item social"><a href="https://es-es.facebook.com/LaLiga" target="_blanket"><i
                             class="fab fa-facebook-f"></i></a><a href="https://twitter.com/LaLiga" target="_blanket"><i
@@ -113,11 +108,12 @@
                         href="https://www.youtube.com/user/laliga" target="_blanket"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <p class="copyright">La Liga © 2021</p>
+            <p class="copyright">La Liga &#169 2021</p>
         </div>
-
     </div>
 </footer>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
 </script>
