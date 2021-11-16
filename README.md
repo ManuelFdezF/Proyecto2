@@ -1,9 +1,11 @@
 # Proyecto - La liga V1.0 
 
 En este proyecto creamos una página web de La Liga de Futbol que se divide en tres apartados:
-* __Noticias__(Home): En él se verán las diferentes noticias de actualidad.
-* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada.
+* __Noticias__(Home): En él se verán las diferentes noticias de actualidad. También veremos en el menú de navegación los escudos de los equipos ordenados en función a su posición actual en la clasificación.
+* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada y veremos también los escudos en el menú de navegación.
 * __Clasificación__: Se muestra el "notición del día" y la clasificación completa. 
+
+
 
 Los datos de resultados y clasificación son en caliente ya que se utiliza una API para descargar los datos, con lo cual siempre estarán actualizados.
 
@@ -11,6 +13,7 @@ Los datos de resultados y clasificación son en caliente ya que se utiliza una A
 El proyecto de la página web se puede ver pinchando [aquí](https://la-liga21.netlify.app/)
 
 ## Tecnologías empleadas:
+![logosProgram](https://raw.githubusercontent.com/ManuelFdezF/Proyecto2/master/img/logos.jpg?token=AWFYJGQ4X5UBW2EDAF62WNDBSQF34)
 * __HTML:__ Para realizar la estructura de la página web.
 * __CSS:__ Para el diseño de la página web.
 * __Bootstrap:__ Para el diseño y al utilizar este framework obtenemos una página web responsive que se puede ver en cualquier dispositivo.
