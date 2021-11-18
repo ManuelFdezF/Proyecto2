@@ -81,7 +81,6 @@ tbody tr:nth-child(odd){
 .titulo{
     text-align: center;
     margin-top: 35px;
-    /* border-top: 2px solid rgba(129, 128, 128, 0.329); */
 }
 
 .titulo2{
@@ -193,6 +192,12 @@ tbody td:nth-child(3){
     text-align: center;
     
 }
+/* .equipVisiM{
+    text-align: center;
+} */
+.equipLocalM{
+    text-align: center;
+}
 .tablaResult2 p{
     padding-top: 15px;
     
@@ -244,7 +249,7 @@ tbody td:nth-child(3){
     opacity: 0.8;
 }
 
-@media screen and (max-width:1080px){
+@media screen and (max-width:1125px){
     .logoCampo{
         display: none;
     }

@@ -74,6 +74,7 @@ function crearTabla(parti) {
 
         let nombreEquipoLocal = document.createElement("p");
         nombreEquipoLocal.innerHTML = parti[i].homeTeam.name;
+        nombreEquipoLocal.classList.add("equipLocalM");
         // let nombreEquipoLocal = parti[i].homeTeam.name;
         // nombreEquipoLocal.innerHTML = nombreEquipoLocal;
 
