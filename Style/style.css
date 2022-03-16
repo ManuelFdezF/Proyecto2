@@ -178,6 +178,22 @@ tbody td:nth-child(3){
     font-weight: bold;
 }
 /* ------------------------------ ESTILOS DE RESULTADO ------------------------- */
+.imgLigas{
+    height: 100px;
+}
+.contenedorLigas{
+    width: 70%;
+    margin: 20px auto 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.contenedorLigas img{
+    cursor: pointer;
+}
+.contenedorLigas img:hover{
+    transform: scale(1.2);
+}
+
 .contResul{
     margin-top: 90px;
 }
@@ -189,12 +205,9 @@ tbody td:nth-child(3){
 .pts{
     font-weight: bold;
     font-size: 1.1rem;
-    text-align: center;
-    
+    text-align: center;   
 }
-/* .equipVisiM{
-    text-align: center;
-} */
+
 .equipLocalM{
     text-align: center;
 }
@@ -214,19 +227,40 @@ tbody td:nth-child(3){
     margin: auto;
    margin-bottom: 15px;
    display: flex;
-   justify-content: space-between; 
+   justify-content: space-evenly; 
    align-items: center;
    flex-wrap: wrap;
 }
-
-.botonReset1{
-    background-color: rgb(245, 143, 143);
-    border: none;
-    color: #fff;
-    border-radius: 15px;
-    padding: 3px 10px;
-    margin-left: 15px;
+.containerInput1{
+    width: 25%;
+    display: flex;
+    justify-content: space-evenly;
 }
+.jorn{
+    /* font-size: 10px; */
+    /* width: 33%; */
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+.containerBoton{
+    width: 70%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.contenedorRadio{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.inputRadio{
+    margin-left: 5px;
+}
+
 .tituloBusqueda{
     font-size: 15px;
     margin: 0;

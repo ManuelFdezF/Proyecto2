@@ -37,9 +37,7 @@ function crearClasificacionEscudos(escud) {
         let listadoEscudos = [ escudoEquipo ];
 
         for (let j = 0; j < listadoEscudos.length; j++) {
-            // const li = document.createElement("li");
             li.append(listadoEscudos[j]);
-            // li.appendChild(li);
         }
 
         logoteams2.appendChild(li);

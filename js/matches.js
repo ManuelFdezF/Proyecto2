@@ -5,8 +5,8 @@
 
 
 
-function getDataFetch() {
-    const url = "https://api.football-data.org/v2/competitions/2014/matches ";
+function getDataFetch(url) {
+    // const url = "https://api.football-data.org/v2/competitions/2014/matches ";
     fetch(url, {
         method: "GET",
         headers: {
@@ -18,40 +18,94 @@ function getDataFetch() {
         }
     }).then(function (data) {
         // console.log(data)
-
+        // tituloLigas1.innerHTML = "Resultados La Liga";
         let encuentros = data.matches;
         // console.log(encuentros);
+        // console.log(encuentros)
         crearTabla(encuentros);
         ocultarSpinner();
 
-        let datoInput1 = document.getElementById("datoInput")
-        datoInput1.addEventListener("keyup", function () {
-            datosFiltrados(encuentros);
+        // let datoInput1 = document.getElementById("datoInput")
+        // datoInput1.addEventListener("keyup", function () {
+        //     datosFiltrados(encuentros);
+        // })
+
+        let botonFil = document.getElementById("botonFiltrado")
+        botonFil.addEventListener("click", () =>{
+            datosFiltrados(encuentros)
         })
 
         let datoInput2 = document.getElementById("datoInputJornada")
         datoInput2.addEventListener("keyup", function () {
-            console.log("input jornada vale: ", datoInput2.value)
             if (datoInput2.value == "") {
                 crearTabla(encuentros)
             } else {
                 jornadasFiltrados(encuentros);
             }
         })
-
+        
+        let checkedButton = document.getElementsByName("estadistica")
 
         let buttonReset = document.getElementById("botonReset")
         buttonReset.addEventListener("click", () => {
             datoInput.value = ""
             datoInputJornada.value = ""
+            // checkedButton.checked = "false"
+            for (let i = 0; i < checkedButton.length; i++) {
+                checkedButton[i].checked = false
+                
+            }
+
             crearTabla(encuentros);
         })
+
+
 
     })
 }
 
-getDataFetch();
+getDataFetch("https://api.football-data.org/v2/competitions/2014/matches");
 
+
+
+
+let tituloLigas1 = document.getElementById("tituloLigas")
+
+// ---------------- Botones de ligas -------------------
+
+let Premier1 = document.getElementById("Premier")
+Premier1.addEventListener("click", () => {
+    tituloLigas1.innerHTML = "Resultados Premier League";
+    bodyTable.innerHTML = "";
+    mostrarSpinner();
+    getDataFetch("https://api.football-data.org/v2/competitions/2021/matches")
+    // ocultarSpinner();
+})
+
+let LaLiga1 = document.getElementById("Laliga")
+Laliga.addEventListener("click", () => {
+    tituloLigas1.innerHTML = "Resultados La Liga";
+    bodyTable.innerHTML = "";
+    mostrarSpinner();
+    getDataFetch("https://api.football-data.org/v2/competitions/2014/matches")
+})
+
+let Ligue1 = document.getElementById("Ligue")
+Ligue1.addEventListener("click", () => {
+    tituloLigas1.innerHTML = "Resultados Ligue 1";
+    bodyTable.innerHTML = "";
+    mostrarSpinner();
+    getDataFetch("https://api.football-data.org/v2/competitions/2015/matches")
+})
+
+let Bundesliga1 = document.getElementById("Bundesliga")
+Bundesliga1.addEventListener("click", () => {
+
+    tituloLigas1.innerHTML = "Resultados Bundesliga";
+    bodyTable.innerHTML = "";
+    mostrarSpinner();
+    getDataFetch("https://api.football-data.org/v2/competitions/2002/matches")
+})
 
 // ---------------------- FUNCIÓN DE CREAR TABLA --------------------
 
@@ -138,26 +192,49 @@ function ocultarSpinner() {
     // console.log(spinner)
 }
 
+function mostrarSpinner() {
+    spinner.style.display = '';
+}
 
 // ------------------- Empieza la función para filtar los partidos
+
+
+// let radioBotonChecked = document.querySelector('input[name="estadistica"]:checked').value
+
+
 
 function datosFiltrados(partidosFil) {
     let datoInput = document.querySelector("input").value
     // console.log("funciona")
-    let partidosFiltrados = partidosFil.filter((p) => {
-        if (p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase())) {
-            return true;
-        } else {
+    // console.log(datoInput)
 
-            return false;
-        }
-    })
-    // datoInput.value = "";
-    crearTabla(partidosFiltrados);
-}
+    const proxMatches = document.getElementById("proxParti")
+    const wonMatches = document.getElementById("radioGanados")
+    const drawMatches = document.getElementById("radioEmpatados")
+    const lostMatches = document.getElementById("radioPerdidos")
+
+    // Comparo cual está seleccionado para hacer el filtro
+        
+        if (wonMatches.checked == true){
+            filteredTable = partidosFil.filter((p) => p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == "HOME_TEAM" || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == "AWAY_TEAM" )  
+        } else if (drawMatches.checked == true){
+            filteredTable = partidosFil.filter((p) => p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == "DRAW" || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == "DRAW" )  
+        } else if (lostMatches.checked == true){
+            filteredTable = partidosFil.filter((p) => p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == "AWAY_TEAM" || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == "HOME_TEAM" )  
+        } else if (proxMatches.checked == true){
+            filteredTable = partidosFil.filter((p) => p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == null || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase()) && p.score.winner == null )  
+        } else {
+            filteredTable = partidosFil.filter((p) => p.homeTeam.name.toLowerCase().includes(datoInput.toLowerCase()) || p.awayTeam.name.toLowerCase().includes(datoInput.toLowerCase())) 
+    }
+        
+        // return filteredTable;
+        crearTabla(filteredTable);
+    }
 
 
 // -------------------- función de filtrar por Jornada 
+
+
 
 function jornadasFiltrados(jornadaFil) {
     let datoInputJornada = document.querySelector("input[type=number]").value
@@ -172,12 +249,16 @@ function jornadasFiltrados(jornadaFil) {
 
             return false;
         }
-
     })
+
+
+
     // console.log(jornadaFiltrados)
     // datoInput.value = "";
     crearTabla(jornadaFiltrados);
 }
+
+// ----------------------- Radio - Estadisticas
 
 
 

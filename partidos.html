@@ -9,7 +9,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./Style/style.css">
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
-    <title>Resultados Primera División</title>
+    <title>Resultados</title>
 </head>
 
 <!-- -------------------- Navbar ----------------------- -->
@@ -45,33 +45,69 @@
 
 <body>
     <!-- ----------------------- Contenedor input e imágenes ----------------------- -->
+
+
+
     <div class="contResul">
-        <h3 class="titulo">Resultados Primera División</p>
+        <h3 class="titulo" id="tituloLigas">
+            </p>
+    </div>
+    <div class="contenedorLigas">
+        <img src="./img/ligares.png" alt="" class="imgLigas" id="Laliga">
+        <img src="./img/premier.png" alt="" class="imgLigas" id="Premier">
+        <img src="./img/Ligue1.png" alt="" class="imgLigas" id="Ligue">
+        <img src="./img/bundesliga.png" alt="" class="imgLigas" id="Bundesliga">
+
+    </div>
+    <div class="containerBoton mx-auto">
+        <p class="tituloBusqueda">Introduce un equipo para ver sus partidos o una jornada</p>
     </div>
     <div class="containerInput">
-        <div class="containerGrupo">
-            <div class="containerEquipo">
-                <p class="tituloBusqueda">Introduzca un equipo para ver sus resultados:</p>
-                <input type="text" class="nombreFiltro" id="datoInput" placeholder="Ej. Valencia">
-            </div>
 
-            <div class="containerJornada">
-                <div class="jornadaEInput">
-                    <p class="tituloBusqueda">Introduzca la jornada que desea ver:</p>
-                    <input type="number" class="nombreFiltro jorn" id="datoInputJornada" placeholder="Ej. 1">
-                </div>
-                <div class="containerBoton">
-                    <button type="button" class="botonReset1" id="botonReset">Reset</button>
-                </div>
-            </div>
+        <div class="containerEquipo">
+            <!-- <p class="tituloBusqueda">Busca un equipo:</p> -->
+            <input type="text" class="nombreFiltro jorn" id="datoInput" placeholder="Ej. Valencia">
         </div>
-        <div class="containerLogoC">
+
+
+        <div class="jornadaEInput">
+            <!-- <p class="tituloBusqueda">¿Qué jornada quieres ver?</p> -->
+            <input type="number" class="nombreFiltro jorn" id="datoInputJornada" placeholder="Ej. 1">
+        </div>
+    </div>
+    <div class="contenedorRadio">
+        
+        <input type="radio" class="btn-check" name="estadistica" id="radioGanados" value="radioGanadoss" autocomplete="off" >
+        <label class="btn btn-outline-dark" for="radioGanados">Ganados</label>
+        <input type="radio" class="btn-check" name="estadistica" id="radioEmpatados" value="radioEmpatadoss" autocomplete="off" >
+        <label class="btn btn-outline-dark" for="radioEmpatados">Empatados</label>
+        <input type="radio" class="btn-check" name="estadistica" id="radioPerdidos" value="radioPerdidoss" autocomplete="off" >
+        <label class="btn btn-outline-dark" for="radioPerdidos">Perdidos</label>
+        <input type="radio" class="btn-check" name="estadistica" id="proxParti" value="ProxPartii" autocomplete="off" >
+        <label class="btn btn-outline-dark" for="proxParti">Próximos</label>
+        <!-- <input type="radio" class="inputRadio" name="estadistica" value="estadistica">Todos
+        <input type="radio" class="inputRadio" name="estadistica" value="radioGanados">Ganados
+        <input type="radio" class="inputRadio" name="estadistica" value="radioEmpatados">Empatados
+        <input type="radio" class="inputRadio" name="estadistica" value="radioPerdidos">Perdidos -->
+    </div>
+    <div class="containerInput containerInput1 mx-auto">
+        
+        <div class="containerBoton2">
+            <button type="button" class="btn btn-secondary botonFiltrar" id="botonFiltrado">Filtrar</button>
+        </div>
+
+        <div class="containerBoton2">
+            <button type="button" class="btn btn-danger" id="botonReset">Reset</button>
+        </div>
+    </div>
+    
+    <!-- <div class="containerLogoC">
             <img src="./img/campoFutbol.jpg" alt="" class="logoCampo">
         </div>
         <div class="containerLogoR">
             <img src="./img/logoLaLiga.png" alt="" class="logoResut">
-        </div>
-    </div>
+        </div> -->
+
 
     <!-- ----------------------- Spinner ----------------------- -->
     <div class="containerSpinner">

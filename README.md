@@ -1,8 +1,8 @@
-# Proyecto - La liga V1.0 
+# Proyecto - La liga V2.0 
 
 En este proyecto creamos una página web de La Liga de Futbol que se divide en tres apartados:
 * __Noticias__(Home): En él se verán las diferentes noticias de actualidad. También veremos en el menú de navegación los escudos de los equipos ordenados en función a su posición actual en la clasificación.
-* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por equipo o por jornada. Veremos también los escudos en el menú de navegación al igual que en el Home.
+* __Resultados__: Se puede ve el calendario de toda la temporada y podemos filtrar por jornada o por equipo, pudiendo elegir entre partidos ganados, empatados, perdidos y próximos. Veremos también los escudos en el menú de navegación al igual que en el Home.
 * __Clasificación__: Se muestra el "Notición del día" y la clasificación completa. 
 
 
@@ -57,12 +57,11 @@ Para obtener los escudos utilizamos la función *getDataFetch()* y mediante la f
 
 
 ## Versiones
-* Versión 1.0 - noviembre de 2021
+* Versión 2.0 - marzo de 2022
 
 ## To Do:
 * Añadir más noticias al home
-* Añadir ligas de otros países
-* Añadir apartado de estadísticas
+
 
 
 
